@@ -1,7 +1,8 @@
 function cc(card) {
     'use strict';
-
     var move;
+    var count;
+
     switch(card) {
         case 1:
         case 2:

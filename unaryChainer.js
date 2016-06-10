@@ -1,6 +1,8 @@
 //this function will receive an array of functions and return their grouped result.
 
 function chained(functions) {
+    'use strict';
+
     return function(x){
         return functions.reduce(function(prev, curr){
             return curr(prev);

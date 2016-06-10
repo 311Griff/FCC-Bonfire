@@ -1,6 +1,8 @@
 
 function translatePigLatin(str) {
-/*
+    'use strict';
+
+    /*
 **   variables to create array with string,
 **   check for vowels, get the index of first vowel,
 **   set what to push onto the end the array

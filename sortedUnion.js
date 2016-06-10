@@ -1,5 +1,7 @@
 //this function will take an array of array, etc, and find the unique characters and combine them into a new array
 function uniteUnique(arr) {
+    'use strict';
+
     var args = Array.prototype.slice.call(arguments);
     var first = args[0];
     var arrays = [];

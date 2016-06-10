@@ -1,5 +1,6 @@
 //this verifies if all the letters in the second value of an array are contained in the first value
 function mutation(arr) {
+    'use strict';
     var a = arr[1].toLowerCase().split('');
     var c = true;
     for(var i= 0, length = a.length; i<length; i++) {

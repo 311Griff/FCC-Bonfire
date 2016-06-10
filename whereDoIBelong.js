@@ -1,5 +1,7 @@
 
 function getIndexToIns(arr, num) {
+    'use strict';
+
     var indexNum;
     arr.sort(function(a,b) { //sort the array
         return a - b;

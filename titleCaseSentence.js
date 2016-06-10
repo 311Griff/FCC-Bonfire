@@ -1,5 +1,7 @@
 
 function titleCase(str) {
+    'use strict';
+
     var a = str.toLowerCase().split(" ");
     var b = [];
     var c;

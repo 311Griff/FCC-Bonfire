@@ -1,5 +1,6 @@
 function myReplace(str, before, after) {
 //variables to get the strings into arrays for manipulation
+    'use strict';
     var newStr = before.concat(',', after);
     var newAfter = newStr.split(',');
     var wordAfter;

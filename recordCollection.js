@@ -1,4 +1,4 @@
-
+'use strict';
 // Setup
 var collection = {
     2548: {

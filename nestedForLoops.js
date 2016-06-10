@@ -1,5 +1,7 @@
 
 function multiplyAll(arr) {
+    'use strict';
+
     var product = 1;
     // Only change code below this line
     for(var i=0; i<arr.length; i++) {

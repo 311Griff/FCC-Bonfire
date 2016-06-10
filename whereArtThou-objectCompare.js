@@ -1,5 +1,6 @@
 
 function whereAreYou(collection, source) {
+    'use strict';
 
 //get the properties from the source object in an array
     var srcProps = Object.keys(source); //an array

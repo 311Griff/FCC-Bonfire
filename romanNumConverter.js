@@ -1,6 +1,8 @@
 //this function takes a number, and converts it to roman numerals.
 
 function convertToRoman(num) {
+    'use strict';
+
     var digits = num.toString().split(''); //make the number into a string
     var romans = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
         "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",

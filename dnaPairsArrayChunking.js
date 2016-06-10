@@ -1,5 +1,7 @@
 //this function takes a string, creates pairs in the string, then returns a larger array of the pair arrays
 function pairElement(str) {
+  'use strict';
+
     var pairStr = str.split('');
     var bigArr = [];
     var strArr = [];

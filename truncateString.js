@@ -1,5 +1,7 @@
 
 function truncateString(str, num) {
+    'use strict';
+
     var a=str.length;
     var b = num-3;
     var c;

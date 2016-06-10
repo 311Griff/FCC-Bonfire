@@ -1,6 +1,8 @@
 
 //function returns a missing letter within a string of ascii characters in alphabetical order
 function fearNotLetter(str) {
+    'use strict';
+
     var strArr = str.split('');
     var chars = [];
     var max;

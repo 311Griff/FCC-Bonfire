@@ -1,4 +1,5 @@
 function palindrome(str) {
+    'use strict';
     var a = str.replace(/[_\W\s\0]/gi,'');
     var b = a.toLowerCase();
     var c = b.split('').reverse().join('');

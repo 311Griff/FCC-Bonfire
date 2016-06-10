@@ -1,4 +1,6 @@
 function reverseString(str) {
+    'use strict';
+
     var a =[];
     a = str.split("");
     a.reverse();
