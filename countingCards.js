@@ -1,5 +1,6 @@
 function cc(card) {
-    // Only change code below this line
+    'use strict';
+
     var move;
     switch(card) {
         case 1:
@@ -30,7 +31,7 @@ function cc(card) {
     }
 
     return move;
-    // Only change code above this line
+
 }
 
 // Add/remove calls to test your function.

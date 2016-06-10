@@ -1,4 +1,5 @@
 function rot13(str) {
+    'use strict';
     var a = [];
     var b;
     for(var i = 0, length = str.length; i<length; i++) {

@@ -1,5 +1,6 @@
 
 function chunkArrayInGroups(arr, size) {
+    'use strict';
     var a = [],
         b = 0,
         c = arr.length;
