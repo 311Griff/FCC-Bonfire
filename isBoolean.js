@@ -1,6 +1,8 @@
 //easy quick function to determine if the type of an arg is boolean or not
+
+'use strict';
 function booWho(bool) {
-    'use strict';
+
     return (typeof bool == 'boolean') ? true : false;
 }
 

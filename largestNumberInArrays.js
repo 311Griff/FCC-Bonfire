@@ -1,6 +1,6 @@
-
+'use strict';
 function largestOfFour(arr) {
-    'use strict';
+
     var maxArray = [];
     for(var i = 0, length = arr.length; i < length; i++) {
         var a = 0;

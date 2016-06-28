@@ -17,6 +17,7 @@ function smallestCommons(arr) {
     }
 
     }
+    
     //reference: https://en.wikipedia.org/wiki/Greatest_common_divisor#Using_Euclid.27s_algorithm
     //loops through the array and sends each number to the gcd function to get a value...common = a; min = b in gcd(a,b) = a*b/lcm(a,b)
     while(min <=max) {

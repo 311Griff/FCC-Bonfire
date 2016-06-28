@@ -1,3 +1,4 @@
+'use strict';
 /*
 * A Narcissistic Number is a number which is the sum of its own digits, each raised to the power of the number of digits.
 
@@ -15,7 +16,7 @@
 * */
 
 function narcissistic( value ) {
-    'use strict';
+
     var pie = value.toString().split('');
     var amount = [];
     var result = 0;

@@ -1,6 +1,6 @@
-
+'use strict';
 function findLongestWord(str) {
-    'use strict';
+
 
     var a = str.split(' ');
     var b=1;
