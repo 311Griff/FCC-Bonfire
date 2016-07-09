@@ -29,21 +29,24 @@ var contacts = [
 
 function lookUpProfile(firstName, prop){
 // Only change code below this line
-    var name = false;
-    var group = false;
+    var isName = false;
+    var isGroup = false;
 
     for (var i=0, length = contacts.length; i < length; i++) {
+
         if(firstName === contacts[i].firstName) {
-            name=true;
-            group = (contacts[i][prop]) ? contacts[i][prop] : false;
+
+            isName=true;
+            isGroup = (contacts[i][prop]) ? contacts[i][prop] : false;
+
         }
     }
 
-    if(!name) {
+    if(!isName) {
         return "No such contact";
     }
 
-    return(group) ? group : "No such property";
+    return(isGroup) ? isGroup[1] : "No such property";
 
 
 
@@ -53,4 +56,5 @@ function lookUpProfile(firstName, prop){
 }
 
 // Change these values to test your function
-lookUpProfile("Akira", "address");
+lookUpProfile("Akira", "number");
+
