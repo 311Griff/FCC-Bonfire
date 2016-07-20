@@ -91,6 +91,7 @@ function computerMove() {
     var win = checkWinner(cmpArr);
     if (win !== undefined) {
         alert("winner! " + cmpMarker +" "+  win);
+        location.reload();
     }
 
 };
