@@ -23,58 +23,61 @@ marker.addEventListener('change', function(e) {
 
 var checkWinner = function checkWinner(arr) {
     switch (true) {
-     case arr.indexOf('0')> -1 && arr.indexOf('1') > -1 && arr.indexOf('2') >-1:
-     return 'top row';
-     break;
-     case arr.indexOf('3')> -1 && arr.indexOf('4') > -1 && arr.indexOf('5') >-1:
-     return 'middle row';
-     break;
-     case arr.indexOf('6')> -1 && arr.indexOf('7') > -1 && arr.indexOf('8') >-1:
-     return 'bottom row';
-     break;
-     case arr.indexOf('2')> -1 && arr.indexOf('4') > -1 && arr.indexOf('6') >-1:
-     return 'diagonal top right to bottom left';
-     break;
-     case arr.indexOf('0')> -1 && arr.indexOf('4') > -1 && arr.indexOf('8') >-1:
-     return 'diagonal top left to bottom right';
-     break;
-     case arr.indexOf('2')> -1 && arr.indexOf('5') > -1 && arr.indexOf('8') >-1:
-     return 'right column';
-     break;
-     case arr.indexOf('1')> -1 && arr.indexOf('4') > -1 && arr.indexOf('7') >-1:
-     return 'middle column';
-     break;
-     case arr.indexOf('0')> -1 && arr.indexOf('3') > -1 && arr.indexOf('6') >-1:
-     return 'left column';
-     break;
-     default:
-     return;
+        case arr.indexOf('0')> -1 && arr.indexOf('1') > -1 && arr.indexOf('2') >-1:
+            return 'top row';
+            break;
+        case arr.indexOf('3')> -1 && arr.indexOf('4') > -1 && arr.indexOf('5') >-1:
+            return 'middle row';
+            break;
+        case arr.indexOf('6')> -1 && arr.indexOf('7') > -1 && arr.indexOf('8') >-1:
+            return 'bottom row';
+            break;
+        case arr.indexOf('2')> -1 && arr.indexOf('4') > -1 && arr.indexOf('6') >-1:
+            return 'diagonal top right to bottom left';
+            break;
+        case arr.indexOf('0')> -1 && arr.indexOf('4') > -1 && arr.indexOf('8') >-1:
+            return 'diagonal top left to bottom right';
+            break;
+        case arr.indexOf('2')> -1 && arr.indexOf('5') > -1 && arr.indexOf('8') >-1:
+            return 'right column';
+            break;
+        case arr.indexOf('1')> -1 && arr.indexOf('4') > -1 && arr.indexOf('7') >-1:
+            return 'middle column';
+            break;
+        case arr.indexOf('0')> -1 && arr.indexOf('3') > -1 && arr.indexOf('6') >-1:
+            return 'left column';
+            break;
+        default:
+            return;
 
-     }
+    }
 
 };
 
 //user's play...
 board.forEach(function(aBox) {
-    aBox.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (this.getAttribute('name')!== 'used'){
-            this.innerHTML = usrMarker;
-            usrArr.push(this.getAttribute('data-value'));
-            usrArr.sort();
-            this.setAttribute('name', 'used');
-        } else {
-            //do nothing
-        }
-        //check for a winner
-        var win = checkWinner(usrArr);
-        if (win !== undefined) {
-            alert("winner! " + usrMarker +" "+  win);
-            location.reload();
-        } else {
-            computerMove();
-        }
-    });
+    var eventList = ["touchstart", "click"];
+    for(event of eventList) {
+        aBox.addEventListener(event, function(e) {
+            e.stopPropagation();
+            if (this.getAttribute('name')!== 'used'){
+                this.innerHTML = usrMarker;
+                usrArr.push(this.getAttribute('data-value'));
+                usrArr.sort();
+                this.setAttribute('name', 'used');
+            } else {
+                //do nothing
+            }
+            //check for a winner
+            var win = checkWinner(usrArr);
+            if (win !== undefined) {
+                alert("winner! " + usrMarker +" "+  win);
+                location.reload();
+            } else {
+                computerMove();
+            }
+        });
+    }
 
 });
 
