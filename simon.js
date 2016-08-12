@@ -11,7 +11,7 @@ document.getElementById('start-button').addEventListener('click', function () {
 
 //reset the game button
 document.getElementById('quit').addEventListener('click', function(){
-   clearGame();
+   location.reload();
 });
 
 //sets the variables for the game and starts it
@@ -22,13 +22,6 @@ function startGame() {
     newRound(copy);
 }
 
-//clears the variables for the game and ends the process
-function clearGame() {
-    simon = [];
-    counter = 0;
-    document.getElementById('counter').innerHTML = counter;
-
-}
 
 //a new round that adds the next move by simon and animates it for the user
 function newRound(copy) {
